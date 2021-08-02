@@ -56,6 +56,23 @@ $statement3->closeCursor();
                 </ul>
             </nav>
         </aside>
+        <section>
+            <h2><?php echo $category_name; ?></h2>
+            <table>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th class="right">Price</th>
+                </tr>
+                <?php foreach ($products as $product) : ?>
+                    <tr>
+                        <td><?php echo $product['productCode']; ?></td>
+                        <td><?php echo $product['productName']; ?></td>
+                        <td class="right"><?php echo $product['listPrice']; ?></td>
+                    </tr>
+                <?php endforeach ?>
+            </table>
+        </section>
     </main>
 </body>
 
